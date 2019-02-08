@@ -83,6 +83,7 @@ namespace FullCRUDImplementationWithJquery.Controllers
             if (Stu != null)
             {
                 Stu.IsDeleted = true;
+                db.tblStudents.Remove(Stu);
                 db.SaveChanges();
                 result = true;
             }
